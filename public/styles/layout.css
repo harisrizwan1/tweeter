@@ -13,10 +13,21 @@ html {
 /*
  * Global layout stuff
  */
+ b {
+   font-weight: 600;
+ }
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
+}
+
+.container {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
 }
