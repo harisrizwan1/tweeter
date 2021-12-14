@@ -13,6 +13,25 @@
 }
 
 .below-input {
+  font-family: 'Bungee', sans-serif;
   display: flex;
   justify-content: space-between;
+}
+
+.below-input button {
+  background-color: #5b00d1;
+  color: white;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  box-shadow: 2px 2px 5px grey;
+}
+
+.below-input button:hover {
+  box-shadow: 5px 5px 5px black;
 }
