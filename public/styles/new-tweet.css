@@ -32,3 +32,7 @@
 .below-input button:hover {
   box-shadow: 5px 5px 5px black;
 }
+
+.negative-counter {
+  color: red;
+}
