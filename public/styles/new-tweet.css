@@ -1,0 +1,18 @@
+.new-tweet {
+}
+
+.new-tweet textarea {
+  width: 100%;
+  margin-top: 1em;
+  background-color: transparent;
+  height: 36px;
+  border: none;
+  border-bottom: 2px solid;
+  outline: none;
+  resize: none;
+}
+
+.below-input {
+  display: flex;
+  justify-content: space-between;
+}
