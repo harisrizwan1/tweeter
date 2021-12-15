@@ -1,0 +1,37 @@
+article.tweet {
+  border: 3px solid black;
+  margin: 1em 0em;
+  padding: 0.5em;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3%;
+}
+
+article.tweet footer hr {
+  border: 1px solid black;
+}
+
+article.tweet footer section {
+  display: flex;
+  justify-content: space-between;
+}
+
+article.tweet footer section div {
+  color: #5b00d1;
+}
+
+/* hover */
+article.tweet:hover {
+  box-shadow: 5px 5px 5px grey;
+}
+
+article.tweet footer section div :hover {
+  color: lightsalmon;
+}

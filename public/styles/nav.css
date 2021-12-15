@@ -3,7 +3,8 @@
 }
 
 nav {
-  position: absolute;
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 70px;
   background-color: #5b00d1;
