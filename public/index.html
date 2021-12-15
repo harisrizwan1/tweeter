@@ -28,7 +28,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
   <body>
@@ -55,6 +54,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
       <section class="new-tweet">
         <form method="POST" action="/tweets">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
@@ -64,7 +64,9 @@
           </div>
         </form>
       </section>
-      <section class="all-tweets">
+
+      <section id="tweets-container" class="all-tweets">
+
         <article class="tweet">
           <header>
             <p>name</p>
@@ -83,8 +85,11 @@
             </seciton>
           </footer>
         </article>
+
       </section>
+
     </main>
     <script src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/client.js"></script>
   </body>
 </html>

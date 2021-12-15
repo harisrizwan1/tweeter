@@ -26,13 +26,14 @@ const createTweetElement = function(data) {
       </footer>
     </article>
   `);
+
   return $tweet;
 };
 
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const $createdTweet = createTweetElement(tweet);
-    $('#tweets-container').append($createdTweet);
+    $("#tweets-container").append($createdTweet);
   }
 };
 
