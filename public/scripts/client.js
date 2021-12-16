@@ -55,6 +55,24 @@ const tweetToggle = function() {
   });
 };
 
+// functions for toTop button
+$(window).scroll(function() {
+  if ($(this).scrollTop()) {
+    $('#toTop').fadeIn();
+    $('#slide-toggle').fadeOut();
+  } else {
+    $('#toTop').fadeOut();
+    $('#slide-toggle').fadeIn();
+  }
+});
+
+$("#toTop").click(function() {
+  $("html, body").animate({scrollTop: 0}, 1000);
+  $('#new-tweet-form').slideDown(function() {
+    $('#tweet-text').focus();
+  });
+});
+
 // funciton handler for submit
 const tweetSubmitter = function(event) {
   event.preventDefault();
