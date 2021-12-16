@@ -48,35 +48,48 @@ const escape = function(str) {
   return div.innerHTML;
 };
 
+// toggle slider for new tweet
+const tweetToggle = function() {
+  $('#new-tweet-form').slideToggle(function() {
+    $('#tweet-text').focus();
+  });
+};
+
+// funciton handler for submit
+const tweetSubmitter = function(event) {
+  event.preventDefault();
+  const $error = $(this).children('.error');
+  const text = $(this).children('#tweet-text').val();
+  $error.slideUp().empty();
+
+  // check if input is valid
+  if (!text) {
+    $error.append("Tweets cannot be blank").slideDown();
+    return false;
+  } else if (text.length > 140) {
+    $error.append("Tweet is too long!").slideDown();
+    return false;
+  }
+
+  $.ajax({
+    method: "POST",
+    url: "http://localhost:8080/tweets/",
+    data: $(this).serialize(),
+    success: function() {
+      // reload content without refreshing page
+      $("#tweets-container").empty();
+      loadTweets();
+    }
+  });
+};
+
 $(document).ready(function() {
   // calls loadtweets funtion
   loadTweets();
 
+  // listen for toggle click
+  $('#slide-toggle').click(tweetToggle);
+
   // request handler for new tweet submission
-  $('#new-tweet-form').submit(function(event) {
-    event.preventDefault();
-    const $error = $(this).children('.error');
-    $error.slideUp().empty();
-    const text = $(this).children('#tweet-text').val();
-
-    // check if input is valid
-    if (!text) {
-      $error.append("Tweets cannot be blank").slideDown();
-      return false;
-    } else if (text.length > 140) {
-      $error.append("Tweet is too long!").slideDown();
-      return false;
-    }
-
-    $.ajax({
-      method: "POST",
-      url: "http://localhost:8080/tweets/",
-      data: $(this).serialize(),
-      success: function() {
-        // reload content without refreshing page
-        $("#tweets-container").empty();
-        loadTweets();
-      }
-    });
-  });
+  $('#new-tweet-form').submit(tweetSubmitter);
 });
