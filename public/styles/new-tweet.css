@@ -13,6 +13,12 @@ section.new-tweet {
   resize: none;
 }
 
+.new-tweet .error {
+  display: none;
+  color: red;
+  border: 1px solid red;
+}
+
 .below-input {
   font-family: 'Bungee', sans-serif;
   display: flex;
