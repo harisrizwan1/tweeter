@@ -15,4 +15,6 @@ This repository is the starter code for the project: Students will fork and clon
 ## Dependencies
 
 - Express
+- Body-parser
+- Chance
 - Node 5.10.x or above
