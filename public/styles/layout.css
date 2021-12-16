@@ -23,6 +23,10 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
+body.dark-mode {
+  color: white;
+  background-color: #243447;
+}
 
 .container {
   width: 90vw;

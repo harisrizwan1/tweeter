@@ -7,6 +7,9 @@ article.tweet {
   flex-direction: column;
   justify-content: space-between;
 }
+article.tweet.dark-mode {
+  border: 3px solid white;
+}
 
 article.tweet header {
   display: flex;
@@ -14,8 +17,11 @@ article.tweet header {
   margin-bottom: 0.5em;
 }
 
-article.tweet footer hr {
+article.tweet hr {
   border: 1px solid black;
+}
+article.tweet hr.dark-mode {
+  border: 1px solid white;
 }
 
 article.tweet footer section {
@@ -25,6 +31,9 @@ article.tweet footer section {
 
 article.tweet footer section div {
   color: #5b00d1;
+}
+article.tweet footer section div.dark-mode {
+  color: #9241fc;
 }
 
 /* hover */

@@ -16,18 +16,29 @@ nav span {
   font-family: 'Bungee', sans-serif;
 }
 
-div#slide-toggle {
+#toggles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.fa-adjust {
+  margin-right: 2vw;
+  cursor: pointer;
+}
+
+#slide-toggle {
   display: flex;
   margin: 0;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
 }
-div#slide-toggle:hover {
+#slide-toggle:hover {
   color: aqua;
 }
 
-div#slide-toggle .fa-angle-double-down{
+#slide-toggle .fa-angle-double-down{
   align-self: center;
   color: red;
 }

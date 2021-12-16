@@ -73,6 +73,18 @@ $("#toTop").click(function() {
   });
 });
 
+// darkmode toggle handler
+$(function() {
+  $(".fa-adjust").click(function() {
+    $("body").toggleClass("dark-mode");
+    $("article.tweet").toggleClass("dark-mode");
+    $("article.tweet hr").toggleClass("dark-mode");
+    $("#tweet-text").toggleClass("dark-mode");
+    $("#profile").toggleClass("dark-mode");
+    $("article.tweet footer section div").toggleClass("dark-mode");
+  });
+});
+
 // funciton handler for submit
 const tweetSubmitter = function(event) {
   event.preventDefault();

@@ -2,7 +2,7 @@ section.new-tweet {
   margin: 1em 1px;
 }
 
-.new-tweet textarea {
+#tweet-text {
   width: 100%;
   margin-top: 1em;
   background-color: transparent;
@@ -11,6 +11,13 @@ section.new-tweet {
   border-bottom: 2px solid;
   outline: none;
   resize: none;
+}
+#tweet-text.dark-mode {
+  color: white;
+}
+.dark-mode::placeholder {
+  opacity: 1;
+  color: white;
 }
 
 .new-tweet .error {

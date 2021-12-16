@@ -9,3 +9,6 @@
   justify-content: center;
   align-items: center;
 }
+#profile.dark-mode {
+  background-color: rgba(59, 7, 59, 0.438);
+}
