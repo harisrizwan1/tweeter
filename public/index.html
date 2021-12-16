@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -32,16 +33,16 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <div class="nav-header">
-      <nav>
-        <span>tweeter</span>
-        <div id="slide-toggle">
-          <p><b>Write</b> a new tweet</p>
-          <i class="fas fa-angle-double-down"></i>
-        </div>
-      </nav>
-  
-      <header>
+    <nav>
+      <span>tweeter</span>
+      <div id="slide-toggle">
+        <p><b>Write</b> a new tweet</p>
+        <i class="fas fa-angle-double-down"></i>
+      </div>
+    </nav>
+
+    <div id="head-container">
+      <header id="profile">
         <div>
             <img src="/images/profile-hex.png"> 
         </div>
@@ -50,28 +51,28 @@
             <h2><b>Haris Rizwan</b></h2>
         </div>
       </header>
+
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+
+        <section class="new-tweet">
+          <form id="new-tweet-form" method="POST" action="/tweets">
+            <label class="error" for="tweet-text"></label>
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div class="below-input">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+
+        <section id="tweets-container" class="all-tweets"></section>
+
+        <button id="toTop">Top</button>
+
+
+      </main>
     </div>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-
-      <section class="new-tweet">
-        <form id="new-tweet-form" method="POST" action="/tweets">
-          <label class="error" for="tweet-text"></label>
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div class="below-input">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-
-      <section id="tweets-container" class="all-tweets"></section>
-
-      <button id="toTop">Top</button>
-
-
-    </main>
     <script src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
   </body>

@@ -25,9 +25,9 @@ body {
 }
 
 .container {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 #toTop {
@@ -44,4 +44,25 @@ body {
   padding: 15px;
   border-radius: 50%;
   font-size: 18px;
+}
+
+@media only screen and (min-width: 900px) {
+  body nav {
+    background-color: #5b00d1;
+  }
+
+  #head-container {
+    max-width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    top: 10vw;
+  }
+
+  #profile {
+    min-width: 273.5px;
+    max-width: 25vw;
+  }
 }

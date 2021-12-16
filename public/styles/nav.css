@@ -1,7 +1,3 @@
-.nav-header {
-  position: relative;
-}
-
 nav {
   position: fixed;
   top: 0;
@@ -27,12 +23,11 @@ div#slide-toggle {
   justify-content: center;
   cursor: pointer;
 }
+div#slide-toggle:hover {
+  color: aqua;
+}
 
 div#slide-toggle .fa-angle-double-down{
   align-self: center;
   color: red;
-}
-
-div#slide-toggle:hover {
-  color: aqua;
 }

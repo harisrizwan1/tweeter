@@ -38,7 +38,6 @@ section.new-tweet {
   border-right-width: 0px;
   box-shadow: 2px 2px 5px grey;
 }
-
 .below-input button:hover {
   box-shadow: 5px 5px 5px black;
 }
