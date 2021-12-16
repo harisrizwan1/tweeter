@@ -26,14 +26,40 @@ $(document).ready(function() {
   };
   
   const renderTweets = function(tweets) {
+    const $container = $("#tweets-container");
     for (const tweet of tweets) {
       const $createdTweet = createTweetElement(tweet);
-      $("#tweets-container").append($createdTweet);
+      $container.prepend($createdTweet);
     }
   };
 
-  $('#new-tweet-form').on('submit', (event) => {
+  const loadTweets = function() {
+    $.ajax('http://localhost:8080/tweets', {method: "GET"})
+      .then(function(data) {
+        renderTweets(data);
+      });
+  };
+
+  loadTweets();
+
+  $('#new-tweet-form').submit(function(event) {
     event.preventDefault();
-    console.log('worked');
+    const text = $(this).children('#tweet-text').val();
+    if (!text) {
+      alert("Tweet cannot be blank");
+      return false;
+    } else if (text.length > 140) {
+      alert("Tweet is too long!");
+      return false;
+    }
+    $.ajax({
+      method: "POST",
+      url: "http://localhost:8080/tweets/",
+      data: $(this).serialize(),
+      success: function() {
+        $("#tweets-container").empty();
+        loadTweets();
+      }
+    });
   });
 });
