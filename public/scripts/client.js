@@ -99,6 +99,9 @@ const tweetSubmitter = function(event) {
       loadTweets();
     }
   });
+  
+  // reset the form
+  $('#new-tweet-form').trigger("reset");
 };
 
 $(document).ready(function() {
