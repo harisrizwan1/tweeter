@@ -6,9 +6,23 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
+Main page
 !["Screenshot of main page"](https://github.com/harisrizwan1/tweeter/blob/master/docs/main.png?raw=true)
+
+Main page night mode
+!["Screenshot of main page night mode"](https://github.com/harisrizwan1/tweeter/blob/master/docs/main-night.png?raw=true)
+
+Main page night mode toggle
+!["Gif of main page night mode toggle"](https://github.com/harisrizwan1/tweeter/blob/master/docs/nightmode.gif?raw=true)
+
+Input toggle and slide to top button
 !["Gif of toggle and scroll to top feature"](https://github.com/harisrizwan1/tweeter/blob/master/docs/tweet-toggle.gif?raw=true)
+
+Main page for smaller screens
 !["Screenshot of responsive main page"](https://github.com/harisrizwan1/tweeter/blob/master/docs/responsive-main.PNG?raw=true)
+
+Main page night mode for smaller screens
+!["Screenshot of responsive main page night mode"](https://github.com/harisrizwan1/tweeter/blob/master/docs/responsive-main-night.png?raw=true)
 
 ## Getting Started
 
