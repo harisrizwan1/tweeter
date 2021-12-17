@@ -114,6 +114,7 @@ const tweetSubmitter = function(event) {
   
   // reset the form
   $('#new-tweet-form').trigger("reset");
+  $('.counter').text(140);
 };
 
 $(document).ready(function() {
